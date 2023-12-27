@@ -1,15 +1,11 @@
-
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-
 // Function to generate character set using ASCII values
 function generateCharset(start, end) {
-  return Array.from({ length: end - start + 1 }, (_, i) => String.fromCharCode(start + i));
+  // Creates an array of a specified length using array.from
+  return Array.from(
+    // The length is calculated based on thr difference between end and start character codes, plus 1
+    { length: end - start + 1 }, 
+    // The mapping function generates characters using String.fromCharcode
+    (_, i) => String.fromCharCode(start + i));
 }
 
 // Character sets from ASCII 
